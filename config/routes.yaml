@@ -1,0 +1,15 @@
+home:
+     path: /restaurant
+     controller: App\Controller\RestaurantController::indexAction
+     
+
+show_horaire_ouverture:
+     path: /restaurant/{id}
+     controller: App\Controller\RestaurantController::showAction     
+     methods:  GET
+
+
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+ 

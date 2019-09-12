@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+ {% block body %}
+  
+    <div class="container">
+		<div class="row">
+			<div class="col align-self-center">	
+ 
+			    <h3 class="mt-5"> Horaire d'ouverture</h3>
+			    <table class="table">
+			        {% for number in number %}
+					    <tr>
+						   <td>lundi:</td>
+						   <td>{{number.lundi}}</td>
+					    </tr>
+					    <tr>
+						   <td>mardi:</td>
+						   <td>{{number.mardi}}</td>
+					    </tr>
+						<tr>
+						   <td>mercredi:</td>
+						   <td>{{number.mercredi}}</td>
+					    </tr>
+						<tr>
+						   <td>jeudi:</td>
+						   <td>{{number.jeudi}}</td>
+					    </tr>
+					    <tr>
+						   <td>vendredi:</td>
+						   <td>{{number.vendredi}}</td>
+					    </tr>
+					    <tr>
+						   <td>samedi:</td>
+						   <td>{{number.samedi}}</td>
+					    </tr>
+						<tr>
+						   <td>dimanche:</td>
+						   <td>{{number.dimanche}}</td>
+					    </tr>
+				    {% endfor %}
+				  
+			    </table>
+  
+    </div></div></div>
+{% endblock %}

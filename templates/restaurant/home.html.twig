@@ -1,0 +1,66 @@
+
+
+ {% extends 'base.html.twig' %}
+ 
+  {% block javascripts %} 
+	 <script type="text/javascript">
+					function myFunction() 
+					{
+						var input, filter, table, tr, td, i, txtValue;
+						  input = document.getElementById("search");
+						  filter = input.value;
+						  table = document.getElementById("myTable");
+						  tr = table.getElementsByTagName("tr");
+						  for (i = 0; i < tr.length; i++) {
+							td = tr[i].getElementsByTagName("td")[0];
+							if (td) {
+							  txtValue = td.textContent || td.innerText;
+							  if (txtValue.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
+								tr[i].style.display = "";
+							  } else {
+								tr[i].style.display = "none";
+							  }
+							}       
+						  }
+					 
+					}
+		</script>
+  {% endblock %}
+ {% block body %}
+  &nbsp;&nbsp;
+
+ 
+		
+		   <div class="container">
+				<div class="row">
+					<div class="col align-self-center">	
+						<h3 class="mt-5"> Restaurant</h3>
+						<table class="table" id="myTable">
+							<tr>
+							   <td>Name </td>
+							   <td>Action </td>
+							</tr>
+							<tr>
+						   {% for number in number %}
+							 
+							   <td>{{number.name}}</td>
+						   <td> <a href="/restaurant/{{number.id}}" ><span class="glyphicon glyphicon-check"></span></a><a href="/horaire/{{number.id}}" > <span class="glyphicon glyphicon-plus"> </a></td>
+						   </tr>
+						   {%else %}
+						   
+						   <td>Aucun horaire rensigne ...!</td>
+						 
+						   </tr>
+						   
+						{% endfor %}
+					  </table>
+					</div>
+				</div>
+			</div>
+   
+{% endblock %}
+
+
+
+       
+ 
