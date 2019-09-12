@@ -28,3 +28,4 @@ return  les restauants et les horaires d'un restaurant en format Json
 http://127.0.0.1:8000/restaurant/api return tout les restauant en format Json
 http://127.0.0.1:8000/restaurant/api/1  return les horaire d'un restauant en format Json
 
+NB : vous trouvez aussi la base de données pour le projet
